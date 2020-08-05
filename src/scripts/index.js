@@ -172,4 +172,20 @@ Object.defineProperty(obj, 'name',{
     configurable: true
 });
 
+// alert('Hello Apple, You are amazing!');
 
+//with let reassignment can be done
+let age = 40;
+age = 100;
+console.log(age);
+
+//reassignment is not possible with const
+// const number = 20;
+// number = 500;
+// console.log(number);
+
+//using template strings
+const myname = 'Apple';
+const myage = 10;
+
+console.log(`My name is ${myname} and I am ${myage} years old.`);
