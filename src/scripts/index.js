@@ -160,3 +160,16 @@ class Dog extends Animal{
 
 let myDog = new Dog();
 console.log('My dog is ' + myDog.age +' and ' + myDog.bark());
+
+//defining properties
+//using defineProperty
+var obj = {};
+
+Object.defineProperty(obj, 'name',{
+    value: 'my name',
+    writable: true,
+    enumerable: true,
+    configurable: true
+});
+
+
