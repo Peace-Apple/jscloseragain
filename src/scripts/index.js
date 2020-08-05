@@ -249,12 +249,12 @@ const todos = [
         isCompleted: true
     },
     {
-        id: 1,
+        id: 2,
         text: 'Practice Python',
         isCompleted: false
     },
     {
-        id: 1,
+        id: 3,
         text: 'Practice Flask',
         isCompleted: true
     }
@@ -275,7 +275,7 @@ for(let todo of todos){
     console.log(todo.text);
 }
 
-//using forEach, map, filter
+//using high order array methods like forEach, map, filter
 //forEach
 todos.forEach((todo) => {
     console.log(todo.text);
@@ -291,6 +291,30 @@ console.log(todoText);
 //filter
 const todoCompleted = todos.filter((todo) => {
     return todo.isCompleted === true;
+}).map((todo) => {
+    return todo.id;
 });
 
 console.log(todoCompleted);
+
+//conditionals
+// == does not match the datatypes === matches the datatypes as well
+
+//ternary operator
+const z = 3;
+const color = z > 5 ? 'Green' : 'Blue';
+console.log(color);
+
+//switch
+const colour = 'Pink';
+switch (colour) {
+    case 'Green':
+        console.log('Color is Green');
+        break;
+    case 'Blue':
+        console.log('Color is Blue');
+        break;
+    default:
+        console.log('Color is not included');
+        break;
+}
