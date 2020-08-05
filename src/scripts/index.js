@@ -188,4 +188,18 @@ console.log(age);
 const myname = 'Apple';
 const myage = 10;
 
-console.log(`My name is ${myname} and I am ${myage} years old.`);
+const introduction =`My name is ${myname} and I am ${myage} years old.`;
+console.log(introduction);
+
+//to get length using length property
+const kwan = myname.length;
+console.log(kwan);
+
+const s = 'Apple, Banana, Pineapple, Grapes';
+console.log(s.split(', '));
+
+//arrays are variables that hold multiple values
+const numbers = new Array(1, 2, 3, 4, 5);
+numbers[5] = 6;
+numbers.push(7);
+console.log(numbers);
