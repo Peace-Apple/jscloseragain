@@ -201,5 +201,71 @@ console.log(s.split(', '));
 //arrays are variables that hold multiple values
 const numbers = new Array(1, 2, 3, 4, 5);
 numbers[5] = 6;
-numbers.push(7);
+numbers.unshift(0); //To add at the start
+numbers.push(7); //To add at the end
 console.log(numbers);
+console.log(Array.isArray(numbers));
+console.log(numbers.indexOf(2));
+
+const achie = {
+    fname: 'Apple Lurve',
+    age2: 10,
+    hobbies: ['coding', 'singing'],
+    address: {
+        street: 'Pala',
+        city: 'Kampala'
+    }
+};
+console.log(achie);
+console.log(achie.hobbies[1]);
+console.log(achie.address.city);
+
+//destructuring
+const { fname, age2, address: { city } } = achie;
+console.log(city);
+
+//add properties
+achie.email = 'achie@gmail.com';
+console.log(achie);
+
+// array of objects
+const todos = [
+    {
+        id: 1,
+        text: 'Practice JQuery',
+        isCompleted: true
+    },
+    {
+        id: 1,
+        text: 'Practice Python',
+        isCompleted: false
+    },
+    {
+        id: 1,
+        text: 'Practice Flask',
+        isCompleted: true
+    }
+];
+
+console.log(todos);
+
+//loop through array
+for(let x = 1; x < todos.length; x++){
+    console.log(todos[x].text);
+}
+
+//to convert to json
+console.log(JSON.stringify(todos));
+
+//loops|for
+for(let a = 1; a <  5; a++){
+    console.log(a);
+}
+
+//loops|while
+let y = 1;
+
+while(y < 10){
+    console.log(y);
+    y++;
+}
