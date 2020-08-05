@@ -228,6 +228,19 @@ console.log(city);
 achie.email = 'achie@gmail.com';
 console.log(achie);
 
+//loops|for
+for(let a = 1; a <  5; a++){
+    console.log(a);
+}
+
+//loops|while
+let y = 1;
+
+while(y < 10){
+    console.log(y);
+    y++;
+}
+
 // array of objects
 const todos = [
     {
@@ -249,23 +262,35 @@ const todos = [
 
 console.log(todos);
 
+//to convert to json
+console.log(JSON.stringify(todos));
+
 //loop through array
 for(let x = 1; x < todos.length; x++){
     console.log(todos[x].text);
 }
 
-//to convert to json
-console.log(JSON.stringify(todos));
-
-//loops|for
-for(let a = 1; a <  5; a++){
-    console.log(a);
+//loop using for of
+for(let todo of todos){
+    console.log(todo.text);
 }
 
-//loops|while
-let y = 1;
+//using forEach, map, filter
+//forEach
+todos.forEach((todo) => {
+    console.log(todo.text);
+});
 
-while(y < 10){
-    console.log(y);
-    y++;
-}
+//map-returns an array
+const todoText = todos.map((todo) => {
+    return todo.text;
+});
+
+console.log(todoText);
+
+//filter
+const todoCompleted = todos.filter((todo) => {
+    return todo.isCompleted === true;
+});
+
+console.log(todoCompleted);
