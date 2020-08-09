@@ -332,7 +332,7 @@ const sum = (num1=1, num2=2) => {
 console.log(sum(4, 5));
 
 //constructor functions
-function Person(fname, lname, dob){
+function Person(fname, lname, dob) {
     this.fname = fname;
     this.lname =lname;
     this.dob = new Date(dob);
@@ -349,3 +349,30 @@ const person2 = new Person('Stella', 'Tabs', '3/5/1987');
 console.log(person2.fname);
 console.log(person2.dob.getFullYear());
 
+//classes
+class Dano {
+    constructor(fname, lname, dob){
+        this.fname = fname;
+        this.lname =lname;
+        this.dob = new Date(dob);
+    }
+
+    getBirthYear() {
+        return this.dob.getFullYear();
+    };
+}
+
+//instantiate object of class
+const dano1 = new Dano('Peace', 'Apple', '1/1/1990');
+
+console.log(dano1.getBirthYear());
+
+//selectors
+//single
+getElementById('id');
+querySelector('element');
+
+//multiple
+querySelectorAll('className');
+getElementsByClassName('className');
+getElementsByTagName('className');
