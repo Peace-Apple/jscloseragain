@@ -318,3 +318,27 @@ switch (colour) {
         console.log('Color is not included');
         break;
 }
+
+//functions 
+function addNum(num1=1, num2=2){
+    return num1 + num2;
+}
+console.log(addNum(4, 5));
+
+//arrow function
+const sum = (num1=1, num2=2) => {
+    return num1 + num2;
+};
+console.log(sum(4, 5));
+
+//constructor functions
+function Person(fname, lname){
+    this.fname = fname;
+    this.lname =lname;
+}
+
+//instantiate object
+const person1 = Person(Peace, Apple);
+const person2 = Person(Stella, Tabs);
+
+console.log(person2.fname);
