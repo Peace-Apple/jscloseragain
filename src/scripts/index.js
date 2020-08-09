@@ -332,13 +332,20 @@ const sum = (num1=1, num2=2) => {
 console.log(sum(4, 5));
 
 //constructor functions
-function Person(fname, lname){
+function Person(fname, lname, dob){
     this.fname = fname;
     this.lname =lname;
+    this.dob = new Date(dob);
 }
 
+Person.prototype.getBirthYear = () => {
+    return this.dob.getFullYear();
+};
+
 //instantiate object
-const person1 = Person(Peace, Apple);
-const person2 = Person(Stella, Tabs);
+const person1 = new Person('Peace', 'Apple', '1/1/1990');
+const person2 = new Person('Stella', 'Tabs', '3/5/1987');
 
 console.log(person2.fname);
+console.log(person2.dob.getFullYear());
+
